@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "quickswap",
+	"version": "${version}",
+	"name": "QuickSwap",
+	"description": "A Mod For Quick Swap Weapons Or Blocks",
+	"authors": [
+		"Fan Moryn"
+	],
+	"contact": {
+		"homepage": "https://github.com/fanmo-yun",
+		"sources": "https://github.com/fanmo-yun/QuickSwap"
+	},
+	"license": "MIT",
+	"icon": "assets/quickswap/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.quickswap.QuickSwap"
+		],
+		"client": [
+			"com.quickswap.QuickSwapClient"
+		],
+		"fabric-datagen": [
+			"com.quickswap.QuickSwapDataGenerator"
+		]
+	},
+	"mixins": [
+		"quickswap.mixins.json",
+		{
+			"config": "quickswap.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
